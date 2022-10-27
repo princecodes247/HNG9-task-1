@@ -30,7 +30,7 @@ interface SampleData {
 }
 
 const data: SampleData = {
-  slackUsername: "PrinceCodes",
+  slackUsername: "princecodes247",
   backend: true,
   age: 19,
   bio: "I am a software developer and musician with a passion for learning and trying out new technologies",
