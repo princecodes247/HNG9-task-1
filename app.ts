@@ -3,7 +3,7 @@
  */
 import express, { Express, Request, Response } from "express";
 import compression from "compression";
-import errorHandler from "errorhandler";
+
 import dotenv from "dotenv";
 import cors from "cors";
 
@@ -43,6 +43,10 @@ const data: SampleData = {
 };
 
 app.get("/", (_, res) => {
+  res.send("Hello World");
+});
+
+app.get("/user", (_, res) => {
   res.json(data);
 });
 
