@@ -5,6 +5,7 @@ import express, { Express, Request, Response } from "express";
 import compression from "compression";
 import errorHandler from "errorhandler";
 import dotenv from "dotenv";
+import cors from "cors";
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
@@ -20,6 +21,11 @@ const app = express();
  * Express configuration.
  */
 app.set("port", process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080);
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(compression());
 
 interface SampleData {
